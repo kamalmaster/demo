@@ -1,26 +1,22 @@
-import './globals.css';
+import './globals.css'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'My Portfolio',
-  description: 'A simple portfolio website built with Next.js',
-};
+  title: 'Premium Portfolio',
+  description: 'A modern, high-quality portfolio inspired by premium SaaS design.',
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main>
-          <header>
-            <div className="title">Portfolio.</div>
-            <nav className="nav-links">
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <a href="#contact">Contact</a>
-            </nav>
-          </header>
+        <Navbar />
+        <main style={{ minHeight: '100vh', paddingTop: '80px' }}>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
